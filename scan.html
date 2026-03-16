@@ -4,7 +4,6 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Skin Assist Face Scan</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <script>
       tailwind.config = {
@@ -118,15 +117,15 @@
 <div class="h-10 flex justify-between items-center px-8 pt-4">
 <span class="text-xs font-bold">9:41</span>
 <div class="flex gap-1 items-center">
-<span class="material-icons-round text-sm">signal_cellular_alt</span>
-<span class="material-icons-round text-sm">wifi</span>
-<span class="material-icons-round text-sm">battery_full</span>
+<span class="material-symbols-outlined text-sm">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-sm">wifi</span>
+<span class="material-symbols-outlined text-sm">battery_full</span>
 </div>
 </div>
 <header class="px-6 py-4 flex flex-col items-center">
 <h1 class="text-xl font-bold tracking-tight">Scan Face</h1>
 <div class="mt-2 px-4 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-full flex items-center gap-2">
-<span class="material-icons-round text-sm text-slate-500">history</span>
+<span class="material-symbols-outlined text-sm text-slate-500">history</span>
 <p class="text-[12px] font-medium text-slate-500 dark:text-slate-400">Last time scanned: <span class="text-slate-900 dark:text-slate-100">Oct 24, 2:30 PM</span></p>
 </div>
 </header>
@@ -144,44 +143,44 @@
                 Position your face within the circle. Ensure you are in a well-lit environment for best results.
             </p>
 <div class="mt-10 w-full px-4">
-<button onclick="window.location.href='analysis.html'" class="w-full bg-primary hover:bg-opacity-90 text-white font-bold py-5 rounded-[1.5rem] shadow-lg shadow-primary/20 transition-all active:scale-95 flex items-center justify-center gap-2">
-<span class="material-icons-round">center_focus_strong</span>
+<button onclick="window.location.href='analysis.html'" class="w-full bg-primary hover:bg-opacity-90 text-white font-bold py-5 rounded-sm shadow-sm shadow-primary/20 transition-all active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">center_focus_strong</span>
           Scan Now
         </button>
 </div>
 </main>
-<nav class="absolute bottom-0 left-0 right-0 bg-white dark:bg-slate-800 rounded-t-[1.5rem] shadow-[0_-4px_20px_rgba(0,0,0,0.05)] dark:shadow-[0_-4px_20px_rgba(0,0,0,0.2)] border-t border-slate-100 dark:border-slate-700 px-6 pt-4 pb-8 flex justify-between items-center z-40">
-<button onclick="window.location.href='home.html'" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors w-12">
-<span class="material-icons-round text-[26px]">home</span>
-<span class="text-[10px] font-medium">Home</span>
+<nav class="absolute bottom-0 left-0 right-0 bg-white/95 dark:bg-[#0a0f1a]/95 backdrop-blur-xl border-t border-slate-200 dark:border-white/10 pb-8 pt-4 px-6 flex items-center justify-between z-40">
+<button onclick="window.location.href='home.html'" class="flex flex-col items-center gap-1.5 text-slate-400 hover:text-primary transition-colors hover:scale-105">
+<span class="material-symbols-outlined text-2xl font-light">home</span>
+<span class="text-[9px] uppercase tracking-widest font-semibold">Home</span>
 </button>
-<button onclick="window.location.href='history.html'" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors w-12">
-<span class="material-icons-round text-[26px]">history</span>
-<span class="text-[10px] font-medium">History</span>
+<button onclick="window.location.href='history.html'" class="flex flex-col items-center gap-1.5 text-slate-400 hover:text-primary transition-colors hover:scale-105">
+<span class="material-symbols-outlined text-2xl font-light">history</span>
+<span class="text-[9px] uppercase tracking-widest font-semibold">History</span>
 </button>
-<button onclick="window.location.href='scan.html'" class="flex flex-col items-center gap-1 text-primary transition-colors w-12">
-<span class="material-icons-round text-[26px]">photo_camera</span>
-<span class="text-[10px] font-medium">Camera</span>
+<button onclick="window.location.href='scan.html'" class="flex flex-col items-center gap-1.5 text-primary transition-colors hover:scale-105 relative">
+<span class="material-symbols-outlined text-3xl font-light font-medium text-primary">photo_camera</span>
+<span class="text-[9px] uppercase tracking-widest font-semibold">Scan</span>
 </button>
-<button onclick="window.location.href='analysis.html'" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors w-12">
-<span class="material-icons-round text-[26px]">bar_chart</span>
-<span class="text-[10px] font-medium">Analysis</span>
+<button onclick="window.location.href='analysis.html'" class="flex flex-col items-center gap-1.5 text-slate-400 hover:text-primary transition-colors hover:scale-105">
+<span class="material-symbols-outlined text-2xl font-light">analytics</span>
+<span class="text-[9px] uppercase tracking-widest font-semibold">Analysis</span>
 </button>
-<button onclick="window.location.href='profile.html'" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors w-12">
-<span class="material-icons-round text-[26px]">person</span>
-<span class="text-[10px] font-medium">Profile</span>
+<button onclick="window.location.href='profile.html'" class="flex flex-col items-center gap-1.5 text-slate-400 hover:text-primary transition-colors hover:scale-105">
+<span class="material-symbols-outlined text-2xl font-light">person</span>
+<span class="text-[9px] uppercase tracking-widest font-semibold">Profile</span>
 </button>
 </nav>
 <div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full z-50"></div>
-<div class="absolute top-16 left-1/2 -translate-x-1/2 w-[85%] bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 p-3 rounded-2xl flex items-start gap-3">
-<span class="material-icons-round text-blue-500 text-lg">info</span>
+<div class="absolute top-16 left-1/2 -translate-x-1/2 w-[85%] bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 p-3 rounded-sm flex items-start gap-3">
+<span class="material-symbols-outlined text-blue-500 text-lg">info</span>
 <p class="text-[11px] text-blue-700 dark:text-blue-300 leading-tight">
                 AI screening is for pattern analysis only and not a medical diagnosis.
             </p>
 </div>
 </div>
-<button class="fixed bottom-6 right-6 w-12 h-12 bg-white dark:bg-slate-800 rounded-full shadow-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center" onclick="document.documentElement.classList.toggle('dark')">
-<span class="material-icons-round text-slate-800 dark:text-slate-200">dark_mode</span>
+<button class="fixed bottom-6 right-6 w-12 h-12 bg-white dark:bg-slate-800 rounded-full shadow-sm border border-slate-200 dark:border-slate-700 flex items-center justify-center" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined text-slate-800 dark:text-slate-200">dark_mode</span>
 </button>
         </div>
     </div>
