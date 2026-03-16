@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skin Assist Face Scan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#7C3AED", // A vibrant purple similar to the reference image
+              "background-light": "#F9FAFB",
+              "background-dark": "#0F172A",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "1.5rem",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
+        .camera-viewfinder {
+            position: relative;
+            overflow: hidden;
+            border: 2px solid rgba(124, 58, 237, 0.3);
+        }
+        .scan-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #7C3AED, transparent);
+            animation: scan 3s linear infinite;
+            z-index: 10;
+        }
+        @keyframes scan {
+            0% { top: 0%; }
+            100% { top: 100%; }
+        }
+        .guide-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            border: 2px dashed rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .ios-notch {
+            width: 160px;
+            height: 30px;
+            background: black;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            margin: 0 auto;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex justify-center items-center p-4">
+<div class="relative w-full max-w-[390px] h-[844px] bg-white dark:bg-slate-900 rounded-[3rem] shadow-2xl border-[8px] border-slate-200 dark:border-slate-800 flex flex-col overflow-hidden">
+<div class="h-10 flex justify-between items-center px-8 pt-4">
+<span class="text-xs font-bold">9:41</span>
+<div class="flex gap-1 items-center">
+<span class="material-icons-round text-sm">signal_cellular_alt</span>
+<span class="material-icons-round text-sm">wifi</span>
+<span class="material-icons-round text-sm">battery_full</span>
+</div>
+</div>
+<header class="px-6 py-4 flex flex-col items-center">
+<h1 class="text-xl font-bold tracking-tight">Scan Face</h1>
+<div class="mt-2 px-4 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-full flex items-center gap-2">
+<span class="material-icons-round text-sm text-slate-500">history</span>
+<p class="text-[12px] font-medium text-slate-500 dark:text-slate-400">Last time scanned: <span class="text-slate-900 dark:text-slate-100">Oct 24, 2:30 PM</span></p>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center justify-center px-6 relative pb-28">
+<div class="w-full aspect-square max-w-[320px] rounded-full camera-viewfinder bg-slate-200 dark:bg-slate-800 flex items-center justify-center relative shadow-inner overflow-hidden">
+<img alt="Facial scan preview" class="w-full h-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkcUGdEI34fzfI4WXlWOG7zzmjGto7kk3QinU2U_O1mTumxKQV53D2qd1vJMp8ImPJqbe-lrSnxE-_svdjeMjvQpLo5cD2uWQWIn_-tX4v2jKOB5D9JwJvVR8SGwaiWqPLf0lyZps4BXIrlTAVC49AS82vM0W7mb7o4ujwuqeE6kC9C99Iy3QtPp8fJt1RY8Z6oX-AoSKHoMQpt5YHiZGmWkgPOTLftwSP6k1aBUMPApnaVHY_Xl66Bhoy7U8BaGD5ac19x1Tldiyu"/>
+<div class="scan-line"></div>
+<div class="guide-overlay"></div>
+<div class="absolute top-10 left-10 w-8 h-8 border-t-4 border-l-4 border-primary rounded-tl-lg opacity-60"></div>
+<div class="absolute top-10 right-10 w-8 h-8 border-t-4 border-r-4 border-primary rounded-tr-lg opacity-60"></div>
+<div class="absolute bottom-10 left-10 w-8 h-8 border-b-4 border-l-4 border-primary rounded-bl-lg opacity-60"></div>
+<div class="absolute bottom-10 right-10 w-8 h-8 border-b-4 border-r-4 border-primary rounded-br-lg opacity-60"></div>
+</div>
+<p class="mt-8 text-center text-slate-500 dark:text-slate-400 px-8 text-sm leading-relaxed">
+                Position your face within the circle. Ensure you are in a well-lit environment for best results.
+            </p>
+<div class="mt-10 w-full px-4">
+<button onclick="window.location.href='analysis.html'" class="w-full bg-primary hover:bg-opacity-90 text-white font-bold py-5 rounded-[1.5rem] shadow-lg shadow-primary/20 transition-all active:scale-95 flex items-center justify-center gap-2">
+<span class="material-icons-round">center_focus_strong</span>
+          Scan Now
+        </button>
+</div>
+</main>
+<nav class="absolute bottom-0 left-0 right-0 bg-white dark:bg-slate-800 rounded-t-[1.5rem] shadow-[0_-4px_20px_rgba(0,0,0,0.05)] dark:shadow-[0_-4px_20px_rgba(0,0,0,0.2)] border-t border-slate-100 dark:border-slate-700 px-6 pt-4 pb-8 flex justify-between items-center z-40">
+<button onclick="window.location.href='home.html'" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors w-12">
+<span class="material-icons-round text-[26px]">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button onclick="window.location.href='history.html'" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors w-12">
+<span class="material-icons-round text-[26px]">history</span>
+<span class="text-[10px] font-medium">History</span>
+</button>
+<button onclick="window.location.href='scan.html'" class="flex flex-col items-center gap-1 text-primary transition-colors w-12">
+<span class="material-icons-round text-[26px]">photo_camera</span>
+<span class="text-[10px] font-medium">Camera</span>
+</button>
+<button onclick="window.location.href='analysis.html'" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors w-12">
+<span class="material-icons-round text-[26px]">bar_chart</span>
+<span class="text-[10px] font-medium">Analysis</span>
+</button>
+<button onclick="window.location.href='profile.html'" class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors w-12">
+<span class="material-icons-round text-[26px]">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</nav>
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full z-50"></div>
+<div class="absolute top-16 left-1/2 -translate-x-1/2 w-[85%] bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 p-3 rounded-2xl flex items-start gap-3">
+<span class="material-icons-round text-blue-500 text-lg">info</span>
+<p class="text-[11px] text-blue-700 dark:text-blue-300 leading-tight">
+                AI screening is for pattern analysis only and not a medical diagnosis.
+            </p>
+</div>
+</div>
+<button class="fixed bottom-6 right-6 w-12 h-12 bg-white dark:bg-slate-800 rounded-full shadow-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons-round text-slate-800 dark:text-slate-200">dark_mode</span>
+</button>
+</body></html>

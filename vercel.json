@@ -1,0 +1,12 @@
+{
+  "routes": [
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/analysis", "dest": "/analysis.html" },
+    { "src": "/history", "dest": "/history.html" },
+    { "src": "/home", "dest": "/home.html" },
+    { "src": "/login", "dest": "/login.html" },
+    { "src": "/profile", "dest": "/profile.html" },
+    { "src": "/scan", "dest": "/scan.html" },
+    { "src": "/signup", "dest": "/signup.html" }
+  ]
+}

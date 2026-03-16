@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skin Assist - Dynamic Home Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#7C3AED", // Vibrant Purple from reference
+                        "background-light": "#F9FAFB",
+                        "background-dark": "#0F172A",
+                        accent: "#FDBA74", // Soft Orange for secondary elements
+                    },
+                    fontFamily: {
+                        display: ["Plus Jakarta Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "24px",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ios-notch {
+            height: 44px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .dark .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            100% { transform: scale(1.2); opacity: 0; }
+        }
+        .animate-scan-ring {
+            animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex justify-center items-center p-4">
+<div class="relative w-full max-w-[390px] h-[844px] bg-white dark:bg-slate-900 rounded-[3rem] shadow-2xl border-[8px] border-slate-200 dark:border-slate-800 flex flex-col overflow-hidden">
+<div class="ios-notch w-full flex items-center justify-between px-8 pt-4">
+<span class="text-sm font-semibold">9:41</span>
+<div class="flex gap-1.5 items-center">
+<span class="material-icons-outlined text-base">signal_cellular_alt</span>
+<span class="material-icons-outlined text-base">wifi</span>
+<span class="material-icons-outlined text-base">battery_full</span>
+</div>
+</div>
+<header class="px-6 pt-6 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img alt="Sarah's Profile" class="w-12 h-12 rounded-full border-2 border-white dark:border-slate-800 shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnWoHT_lAytVy5F398USZxg8I8Nsqs4LvbwLMcbAJ1fn_q8EEBzheVw4399L4pi92_-SI_aC_W159eL6DY7L5uGPkuYF1Lf-aCbumuJaAQk4-P59S9mPfNyZauAu6C3vcvwds9lnm5_b6AUE7-0YytoztnV6xmvbUVLpBvvQGUkH2Qn0uP3DhaijlZjTns878kfFcHp97T06SamMpowBN0fUBQjtgcqFEumLo3FCGt7qSj0S-mQ33Z8Ac1iI3A3pMVksdiiZi80Ssr"/>
+<div class="absolute -bottom-1 -right-1 bg-green-500 w-4 h-4 rounded-full border-2 border-white dark:border-slate-800"></div>
+</div>
+<div>
+<h1 class="text-xl font-bold leading-tight">Hi, Sarah</h1>
+<div class="flex items-center gap-2">
+<div class="w-20 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[87%] rounded-full"></div>
+</div>
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400">87% Progress</span>
+</div>
+</div>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700">
+<span class="material-icons-outlined text-slate-600 dark:text-slate-300">notifications</span>
+</button>
+</header>
+<main class="flex-1 px-6 mt-8">
+<div class="relative w-full aspect-[4/5] bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950 dark:to-purple-950 rounded-[40px] flex items-center justify-center overflow-hidden border border-white/50 dark:border-slate-800 shadow-xl">
+<div class="absolute -top-20 -left-20 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-20 -right-20 w-64 h-64 bg-accent/20 rounded-full blur-3xl"></div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="relative mb-6">
+<div class="absolute inset-0 bg-primary/20 rounded-full animate-scan-ring"></div>
+<div class="absolute inset-0 bg-primary/10 rounded-full animate-scan-ring" style="animation-delay: 1s"></div>
+<div class="relative w-40 h-40 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center shadow-2xl border-4 border-primary/10">
+<span class="material-icons-outlined text-6xl text-primary">face</span>
+</div>
+</div>
+<div class="text-center px-8">
+<h2 class="text-2xl font-bold mb-2">Ready to Scan?</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                            Analyze your skin pattern today to track progress and receive personalized insights.
+                        </p>
+</div>
+</div>
+            
+</div>
+<div class="mt-10 px-4">
+<button onclick="window.location.href='scan.html'" class="w-full bg-primary hover:bg-indigo-700 text-white py-5 rounded-[24px] font-bold text-lg shadow-lg shadow-primary/30 transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+<span class="material-icons-outlined">center_focus_strong</span>
+                    Scan Now
+                </button>
+<p class="text-center text-[11px] text-slate-400 mt-4 px-8 leading-tight">
+                    By scanning, you agree to our privacy policy regarding non-medical skin pattern analysis.
+                </p>
+</div>
+<div class="mt-8 bg-white dark:bg-slate-800/50 p-6 rounded-[28px] border border-slate-100 dark:border-slate-800">
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-bold">Daily Tip</h3>
+<span class="material-icons-outlined text-primary">lightbulb</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400">
+                    Drinking 8 glasses of water a day helps maintain skin elasticity and natural glow.
+                </p>
+</div>
+</main>
+<nav class="absolute bottom-0 left-0 right-0 bg-white dark:bg-slate-900 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] rounded-t-3xl px-6 pt-4 pb-8 flex items-center justify-between z-40">
+<button onclick="window.location.href='home.html'" class="flex flex-col items-center gap-1 text-primary relative">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</button>
+<button onclick="window.location.href='history.html'" class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">history</span>
+<span class="text-[10px] font-medium">History</span>
+</button>
+<button onclick="window.location.href='scan.html'" class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">photo_camera</span>
+<span class="text-[10px] font-medium">Camera</span>
+</button>
+<button onclick="window.location.href='analysis.html'" class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">bar_chart</span>
+<span class="text-[10px] font-medium">Analysis</span>
+</button>
+<button onclick="window.location.href='profile.html'" class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</nav>
+<div class="fixed bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-slate-300 dark:bg-slate-700 rounded-full z-[60]"></div>
+</div>
+</body></html>
